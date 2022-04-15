@@ -71,10 +71,10 @@ function Footer() {
                 <div className='copyright_sec middel_Sec'>
                     <p>© 2018 Ecommerce theme by www.bisenbaev.com</p>
                     <ul className='flex_ul'>
-                        <li><img src="./images/western.png" /></li>
-                        <li><img src="./images/master.png" /></li>
-                        <li><img src="./images/paypal.png" /></li>
-                        <li><img src="./images/visa.png" /></li>
+                        <li><img src="./Images/Western.png" /></li>
+                        <li><img src="./Images/master.png" /></li>
+                        <li><img src="./Images/Paypal.png" /></li>
+                        <li><img src="./Images/visa.png" /></li>
                     </ul>
                 </div>
             </div>

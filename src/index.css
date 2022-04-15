@@ -169,7 +169,7 @@ ul.prices {
 /* banner section css start */
 .banner_sec {
   height: 500px;
-  /* background-image: url(./images/promotion.png); */
+  /* background-image: url(/Images/promotion.png); */
   background-color: var(--black);
   background-repeat: no-repeat;
   background-position: center;

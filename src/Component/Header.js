@@ -28,7 +28,7 @@ function Header(){
                 </div>
                 <div className='nav_bar top_nav'>
                     <div className='logo'>
-                        <img src="./images/logo.png" />
+                        <img src="./Images/Logo.png" />
                     </div>
                     <div className='menus'>
                         <ul className='flex_ul'>
