@@ -11,3 +11,354 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --blue: #40BFFF;
+  --red: #FF4858;
+  --light-blue: #BCDDFE;
+  --black: #373737;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Header css */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.top_nav,
+.middel_Sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex_ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+ul.flex_ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+span.cart_num {
+  font-size: 12px;
+  position: absolute;
+  background: var(--red);
+  left: 10px;
+  width: 16px;
+  top: -8px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 600;
+  color: #fff;
+}
+
+.menus .flex_ul {
+  gap: 30px;
+}
+
+.menus .flex_ul>li {
+  text-transform: uppercase;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 36px;
+}
+
+.menus .flex_ul li {
+  color: #262626;
+}
+
+li.active {
+  color: var(--blue) !important;
+}
+
+.top_nav {
+  padding: 20px 0px;
+}
+
+/* header css end  */
+
+/* product css start */
+.products h1 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  color: #223263;
+}
+
+.product_box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+ul.starts {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 18px;
+}
+
+ul.prices {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+
+.prices li:nth-child(1) {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 180%;
+  letter-spacing: 0.5px;
+  color: #40BFFF;
+}
+
+.prices li:nth-child(2) {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  text-decoration-line: line-through;
+  color: #9098B1;
+}
+
+.prices li:nth-child(3) {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  color: #FB7181;
+}
+.products {
+  border: 3px solid #F6F7F8;
+}
+.AllSeller {
+  width: fit-content;
+  margin: auto;
+  padding-top: 50px;
+}
+.starts li {
+  color: #FFC600;
+}
+/* Product css end  */
+
+/* banner section css start */
+.banner_sec {
+  height: 500px;
+  /* background-image: url(./images/promotion.png); */
+  background-color: var(--black);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.banner_content {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.banner_content h1 {
+  color: #fff;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 150%;
+}
+
+/* banner section css end  */
+
+/* Highlights Section  start */
+.highlights h1 {
+  text-align: center;
+}
+
+/* Highlights Section End  */
+
+/* Best seller section start  */
+.best_seller h1 {
+  padding-bottom: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 52px;
+  color: #22262A;
+}
+
+ul.seller_menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.seller_menu li {
+  /* font-family: 'Poppins'; */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+}
+.btn {
+  text-align: center;
+  padding: 30px;
+}
+a.load_more {
+  color: #33A0FF;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  border-bottom: 4px solid #33A0FF;
+}
+
+/* Best Seller Section end  */
+
+/* Shoes section css start  */
+.shoes_sec {
+  background: var(--blue);
+}
+.adidas img {
+  margin-top: -110px;
+}
+.adidas {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.adidas > div h1 {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 82px;
+  color: #FFFFFF;
+}
+.adidas > div p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #FFFFFF;
+}
+.adidas > div a {
+  font-weight: 600;
+  font-size: 20px;
+  color: #FFFFFF;
+  line-height: 30px;
+}
+.adidas > div hr {
+  width: 85px;
+  border: 0.5px solid #ffffffc7;
+}
+/* Shoes section css end  */
+/* footer css start */
+.top_footer>div>h2 {
+  padding: 14px 0px;
+}
+
+.footer {
+  padding: 100px 0px;
+  background-color: var(--light-blue);
+}
+
+.top_footer {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 30px;
+}
+
+.top_footer div:nth-child(1) {
+  width: 250px;
+}
+
+.top_footer div:nth-child(2) {
+  width: 230px;
+}
+
+.social_icon li:nth-child(1) {
+  color: #385C8E;
+  font-size: 20px;
+  padding: 24px 8px 24px 0px;
+}
+
+.social_icon li:nth-child(2) {
+  color: #03A9F4;
+  padding: 24px 24px;
+  font-size: 20px;
+}
+
+.middel_Sec {
+  padding: 40px 0px;
+}
+
+.middel_Sec>div>h2 {
+  color: var(--black);
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 20px 0px;
+}
+
+.middel_Sec>div li {
+  list-style: none;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.footer hr {
+  border: 0.5px solid #ffffff54;
+  background: #ffffff59;
+  width: 96%;
+  margin: auto;
+}
+
+.copyright_sec p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #C1C8CE;
+}
+
+.top_footer p {
+  /* font-family: 'Proxima Nova'; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  color: #22262A;
+}
+
+/* footer css end  */

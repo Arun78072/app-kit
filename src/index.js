@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Header from './Component/Header'
+import Footer from './Component/Footer';
+import Banner from './Component/Banner';
+import Highlights from './Component/Highlights';
+import BestSeller from './Component/BestSeller';
+import ShoesSection from './Component/ShoesSection';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Header />
+    <Banner />
+    <Highlights />
+    <BestSeller />
+    <ShoesSection />
+    <Footer />
   </React.StrictMode>
 );
 
