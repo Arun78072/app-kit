@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+// import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './Component/Header'
 import Footer from './Component/Footer';
 import Banner from './Component/Banner';
-import Highlights from './Component/Highlights';
 import BestSeller from './Component/BestSeller';
 import ShoesSection from './Component/ShoesSection';
+import Shipping from './Component/Shipping';
+import News from './Component/News';
+import Feature from './Component/Feature';
+import Newsletter from './Component/Newsletter';
+import Highlights from './Component/Highlights';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +21,10 @@ root.render(
     <Highlights />
     <BestSeller />
     <ShoesSection />
+    <Shipping />
+    <News />
+    <Feature />
+    <Newsletter />
     <Footer />
   </React.StrictMode>
 );
