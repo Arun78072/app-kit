@@ -16,7 +16,7 @@ import Highlights from './Component/Highlights';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header />
+        <Header />
     <Banner />
     <Highlights />
     <BestSeller />

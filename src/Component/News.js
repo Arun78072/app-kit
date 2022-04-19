@@ -59,11 +59,13 @@ const Container = styled.div`
 `;
 const Newssec = styled.div`
 display:flex;
+flex-wrap: wrap;
 justify-content: space-around;
 padding: 100px 0px;
+
 `;
 const NewsSlide = styled.div`
-
+max-width: 380px;
     display:flex;
     align-items: center;
     gap:20px;

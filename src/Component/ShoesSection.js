@@ -10,7 +10,9 @@ export default function ShoesSection() {
                     <a href="/">SHOP NOW</a>
                     <hr />
                 </div>
+                <div>
                 <img src="./images/shoes.png" />
+                </div>
             </Adidashoes>
     )
 }
@@ -20,14 +22,24 @@ const Adidashoes = styled.div`
   justify-content: center;
   align-items: center;
   background: var(--blue);
+  padding:20px;
+  @media (max-width:600px){
+    flex-direction: column-reverse;
+  }
   img {
   margin-top: -110px;
+  max-width: 600px;
+    width: 100%;
   }
 h1 {
   font-weight: 500;
-  font-size: 55px;
-  line-height: 82px;
+  font-size: 56px;
+    line-height: 52px;
   color: #FFFFFF;
+  @media (max-width:600px){
+    font-size: 40px;
+    line-height: 44px;
+  }
 }
 p {
   font-weight: 400;

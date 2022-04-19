@@ -90,6 +90,7 @@ const Featuresec = styled.div`
 display:flex;
 justify-content: space-around;
 padding: 100px 0px;
+flex-wrap: wrap;
 `;
 const FeatureSlide = styled.div`
 

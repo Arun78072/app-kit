@@ -53,6 +53,7 @@ ul{
   justify-content: center;
   gap: 30px;
   list-style: none;
+  flex-wrap: wrap;
 }
 li {
   font-style: normal;
@@ -63,9 +64,11 @@ li {
 
 `;
 const Productbox = styled.div`
-   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 20px;
+   display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1400px;
 `;
 const Allseller = styled.div`
   width: fit-content;

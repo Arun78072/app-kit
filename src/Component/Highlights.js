@@ -46,6 +46,7 @@ const Highlightsec = styled.div`
 display:flex;
 justify-content:center;
 margin-top: -100px;
+flex-wrap: wrap;
 gap:0px;
 h1{
     font-family: 'Poppins';

@@ -29,11 +29,12 @@ const Banners = styled.div`
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
-  font-size: 64px;
-  line-height: 150%;
+  font-size: 12vh;
+    line-height: 13vh;
   }
   section{
       max-width:1200px;
       margin:auto;
+      padding:20px;
   }
 `;

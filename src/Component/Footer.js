@@ -90,8 +90,9 @@ export default function Footer() {
 
 // style 
 const Footerr = styled.div`
-    padding: 100px 0px;
+    padding: 100px 20px;
     background-color: var(--light-blue);
+
 `;
 const Container = styled.div`
     max-width: 1200px;
@@ -121,12 +122,16 @@ section{
 display: grid;
 grid-template-columns: 1.5fr 1fr 1fr;
 gap: 30px;
+@media (max-width: 450px) {
+    grid-template-columns: 1fr;
+  }
 }
+
 h2{
     padding: 14px 0px;
 }
 div{
-    width: 250px;
+    max-width: 250px;
 }
 p{
     font-style: normal;
@@ -142,6 +147,7 @@ const Middel = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 40px 0px;
+  flex-wrap: wrap;
   h2 {
   color: var(--black);
   font-family: 'Poppins';

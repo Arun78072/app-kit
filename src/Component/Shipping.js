@@ -34,7 +34,9 @@ const Container = styled.div`
 const ShipSec = styled.div`
 display:flex;
 justify-content: space-around;
-padding: 100px 0px;
+padding: 100px 20px;
+flex-wrap: wrap;
+gap: 20px;
 div{
     text-align:center;
     max-width:200px;
