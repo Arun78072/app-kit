@@ -9,7 +9,7 @@ import React,{useState} from 'react';
 
 
 export default function Header(){
-    const[show,setShow]=useState(false)
+    const[show,setShow]=useState(true)
     return(
         <>
             <div className="container">
@@ -164,7 +164,7 @@ const Navbar = styled.nav`
   gap: 10px;
   align-items: center;
   @media (max-width:768px){
-      /* display:none; */
+      display:none;
     flex-direction: column;
     align-items: flex-start;;
     position: absolute;
