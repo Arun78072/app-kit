@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Product from "./Product";
-
+import All from './Allproduct';
+import { Routes, Route, Outlet, NavLink } from "react-router-dom";
 
 export default function BestSeller() {
     return (
@@ -8,32 +8,31 @@ export default function BestSeller() {
                 <Bestsellerr>
                     <h1>Best Seller</h1>
                     <ul>
-                        <li className="active">All</li>
-                        <li>Bags</li>
-                        <li>Sneakers</li>
-                        <li>Belt</li>
-                        <li>Sunglasses</li>
+                        <li><NavLink to='/'>All</NavLink></li>
+                        <li><NavLink to='/'>Bags</NavLink></li>
+                        <li><NavLink to='/'>Sneakers</NavLink></li>
+                        <li><NavLink to='/'>Belt</NavLink></li>
+                        <li><NavLink to='/'>Sunglasses</NavLink></li>
                     </ul>
+
+
                 </Bestsellerr>
-            <Allseller>
-                <Productbox>
-                    <Product title="title 1"/>
-                    <Product title="title 2"/>
-                    <Product title="title 3"/>
-                    <Product title="title 4"/>
-                    <Product title="title 5"/>
-                    <Product title="title 6"/>
-                    <Product title="title 7"/>
-                    <Product title="title 8"/>
-                </Productbox>
-            </Allseller>
-                <Appbtn>
-                    <a href="/">Load More</a>
-                </Appbtn>
-            
+                
+                <All />
+
         </>
     )
 }
+
+function Layout() {
+  return (
+    <div>
+      <hr />
+      <Outlet />
+    </div>
+  );
+}
+
 // Styled cpomponent 
 
 const Bestsellerr = styled.div`
@@ -61,29 +60,4 @@ li {
   font-size: 24px;
   line-height: 33px;
 }
-
-`;
-const Productbox = styled.div`
-   display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    max-width: 1400px;
-`;
-const Allseller = styled.div`
-  width: fit-content;
-  margin: auto;
-  padding-top: 50px;
-`;
-const Appbtn = styled.div`
-    text-align: center;
-    padding: 30px;
-  a {
-    color: #33A0FF;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
-  text-transform: uppercase;
-  border-bottom: 4px solid #33A0FF;
-  }
 `;

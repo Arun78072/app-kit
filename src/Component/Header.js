@@ -4,15 +4,12 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { BiMenu } from 'react-icons/bi';
-
-
-
-
-import React from 'react'
-
+import { Routes, Route, Outlet, NavLink } from "react-router-dom";
+import React,{useState} from 'react';
 
 
 export default function Header(){
+    const[show,setShow]=useState(false)
     return(
         <>
             <div className="container">
@@ -39,56 +36,63 @@ export default function Header(){
                         <img src="./Images/Logo.png" />
                     </div>
                     <div>
-                        <ul>
-                            <li className="active"><a href="/">Home</a></li>
-                            <li className="dropdown"><a href="/">Bags</a>
-                            <div className="hovermenu">
-                              <section>
-                              <div>
-                                  <h2>Category</h2>
-                                  <ul>
-                                      <li>About Us</li>
-                                      <li>Infomation</li>
-                                      <li>Privacy Policy</li>
-                                      <li>Terms & Conditions</li>
-                                  </ul>
-                              </div>
-                              <div>
-                                  <h2></h2>
-                                  <ul>
-                                      <li>About Us</li>
-                                      <li>Infomation</li>
-                                      <li>Privacy Policy</li>
-                                      <li>Terms & Conditions</li>
-                                  </ul>
-                              </div>
-                              <div>
-                                  <h2>Category</h2>
-                                  <ul>
-                                      <li>About Us</li>
-                                      <li>Infomation</li>
-                                      <li>Privacy Policy</li>
-                                      <li>Terms & Conditions</li>
-                                  </ul>
-                              </div>
-                              <div>
-                                  <h2>Category</h2>
-                                  <ul>
-                                      <li>About Us</li>
-                                      <li>Infomation</li>
-                                      <li>Privacy Policy</li>
-                                      <li>Terms & Conditions</li>
-                                  </ul>
-                              </div>
-                              </section>
-                            </div>
-                            </li>
-                            <li><a href="/">Sneakers</a></li>
-                            <li><a href="/">Belt</a></li>
-                            <li><a href="/">Contact</a></li>
-                        </ul>
+                        {
+                            show?
+                            <>
+                          <ul>
+                            <li><NavLink to="/">Home</NavLink></li>
+                             <li className="dropdown"><a href="/">Bags</a>
+                             <div className="hovermenu">
+                               <section>
+                               <div>
+                                   <h2>Category</h2>
+                                   <ul>
+                                       <li>About Us</li>
+                                       <li>Infomation</li>
+                                       <li>Privacy Policy</li>
+                                       <li>Terms & Conditions</li>
+                                   </ul>
+                               </div>
+                               <div>
+                                   <h2></h2>
+                                   <ul>
+                                       <li>About Us</li>
+                                       <li>Infomation</li>
+                                       <li>Privacy Policy</li>
+                                       <li>Terms & Conditions</li>
+                                   </ul>
+                               </div>
+                               <div>
+                                   <h2>Category</h2>
+                                   <ul>
+                                       <li>About Us</li>
+                                       <li>Infomation</li>
+                                       <li>Privacy Policy</li>
+                                       <li>Terms & Conditions</li>
+                                   </ul>
+                               </div>
+                               <div>
+                                   <h2>Category</h2>
+                                   <ul>
+                                       <li>About Us</li>
+                                       <li>Infomation</li>
+                                       <li>Privacy Policy</li>
+                                       <li>Terms & Conditions</li>
+                                   </ul>
+                               </div>
+                               </section>
+                             </div>
+                             </li>
+                             <li><a href="/">Sneakers</a></li>
+                             <li><NavLink to="/product">Product</NavLink></li>
+                             <li><NavLink to='/belt'>Belt</NavLink></li>
+                             <li><NavLink to="/contact">Contact</NavLink></li>
+                         </ul>
+                         </>
+                            :null
+                        }
                         <Hamburger>
-                        <BiMenu/>
+                        <button onClick={()=> setShow(!show)}><BiMenu/></button>
                         </Hamburger>
                     </div>
                 </Navbar>
@@ -99,7 +103,23 @@ export default function Header(){
 
 // Style 
 const Hamburger = styled.div`
-
+display:none;
+@media (max-width:768px){
+    font-size: 36px;
+    display: block;
+    padding: 0px 20px;
+    z-index: 9;
+    position: relative;
+}
+button {
+    width: 30px;
+    border: 1px solid #000;
+    height: 30px;
+    border-radius:2px;
+}
+svg {
+    font-size: 24px;
+}
 `;
 const Top = styled.div`
 display: flex;
@@ -135,13 +155,26 @@ const Navbar = styled.nav`
   position:relative;
   justify-content: space-between;
   align-items: center;
-  padding:20px 0px;
+  padding:20px;
   flex-wrap:wrap;
+  position:relative;
   ul{
     list-style: none;
   display: flex;
   gap: 10px;
   align-items: center;
+  @media (max-width:768px){
+      /* display:none; */
+    flex-direction: column;
+    align-items: flex-start;;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background: black;
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+  }
   }
   li{
     text-transform: uppercase;
@@ -153,11 +186,8 @@ const Navbar = styled.nav`
   color: #262626;
   padding:0px 15px;
   }
-  a{
-    transition:all 0.5s;
-  }
-  a:hover{
-    color:#000;
+  .active{
+    color:red;
   }
   a:hover Onhover {
     display:none;

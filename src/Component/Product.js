@@ -1,14 +1,22 @@
 import styled from 'styled-components';
 import { AiOutlineStar } from 'react-icons/ai';
 import { AiFillStar } from 'react-icons/ai';
-
+import { AiOutlineHeart } from 'react-icons/ai';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { Link } from "react-router-dom";
 
 
 export default function Product(prop) {
     return (
             <>
         <Products>
-            <img src="./Images/product.png" />
+            <Onhover>
+              <img src="./Images/product.png" />
+              <div>
+                <Link to="/"><AiOutlineHeart /></Link>
+                <Link to='/'><AiOutlineShoppingCart /></Link>
+              </div>
+            </Onhover>
             <h1>{prop.title}</h1>
             <Star>
                 <li><AiFillStar /></li>
@@ -40,6 +48,38 @@ border: 3px solid #F6F7F8;
   letter-spacing: 0.5px;
   color: #223263;
   }
+ 
+`;
+
+const Onhover = styled.div `
+  position:relative;
+:hover div{
+  /* display:flex; */
+  visibility: visible;
+}
+div{
+  /* transition:all 0.3s; */
+  visibility: hidden;
+    /* display:none; */
+      background-color:#fffffff5;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      align-items:center;
+      position:absolute;
+      top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    }
+    svg {
+    color: #33A0FF;
+    border: 2px solid #33a0ff7a;
+    padding: 10px;
+    font-size: 40px;
+    border-radius: 50%;
+}
 `;
 const Star = styled.ul`
     display: flex;
@@ -49,6 +89,7 @@ const Star = styled.ul`
     li{
       color:#FFC600;
     }
+    
 `;
 
 const List = styled.ul`
