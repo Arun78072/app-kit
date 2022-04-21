@@ -5,11 +5,26 @@ import { BiSearchAlt2 } from 'react-icons/bi';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { BiMenu } from 'react-icons/bi';
 import { Routes, Route, Outlet, NavLink } from "react-router-dom";
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 
 
 export default function Header(){
-    const[show,setShow]=useState(true)
+    const [toggleMenu, setToggleMenu] = useState(false)
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+    const toggleNav = () => {
+      setToggleMenu(!toggleMenu)
+    }
+    useEffect(() => {
+      const changeWidth = () => {
+        setScreenWidth(window.innerWidth);
+      }
+      window.addEventListener('resize', changeWidth)
+      return () => {
+          window.removeEventListener('resize', changeWidth)
+      }
+    }, [])
+
+
     return(
         <>
             <div className="container">
@@ -36,8 +51,7 @@ export default function Header(){
                         <img src="./Images/Logo.png" />
                     </div>
                     <div>
-                        {
-                            show?
+                    {(toggleMenu || screenWidth > 768) && (
                             <>
                           <ul>
                             <li><NavLink to="/">Home</NavLink></li>
@@ -89,10 +103,10 @@ export default function Header(){
                              <li><NavLink to="/contact">Contact</NavLink></li>
                          </ul>
                          </>
-                            :null
-                        }
+                       )}
+
                         <Hamburger>
-                        <button onClick={()=> setShow(!show)}><BiMenu/></button>
+                        <button onClick={toggleNav}><BiMenu/></button>
                         </Hamburger>
                     </div>
                 </Navbar>
@@ -126,6 +140,7 @@ display: flex;
 padding:20px;
   justify-content: space-between;
   align-items: center;
+  flex-wrap:wrap;
   ul{
     list-style: none;
   display: flex;
@@ -164,7 +179,7 @@ const Navbar = styled.nav`
   gap: 10px;
   align-items: center;
   @media (max-width:768px){
-      display:none;
+      /* display:none; */
     flex-direction: column;
     align-items: flex-start;;
     position: absolute;

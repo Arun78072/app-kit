@@ -16,6 +16,8 @@ const Letter = styled.div`
     display:flex;
     justify-content:center;
     padding: 40px 0px;
+    flex-wrap:wrap;
+
 input{
     border-radius: 6px;
     border: 4px solid #BCDDFE;
