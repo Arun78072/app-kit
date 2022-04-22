@@ -11,7 +11,7 @@ export default function ShoesSection() {
                     <hr />
                 </div>
                 <div>
-                <img src="./images/shoes.png" />
+                <img src="./Images/shoes.png" />
                 </div>
             </Adidashoes>
     )
