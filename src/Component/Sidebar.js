@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import { GoPrimitiveDot } from 'react-icons/go';
+import { NavLink } from 'react-router-dom';
+
 export default function Sidebar(){
     return(
         <>
@@ -37,7 +40,17 @@ export default function Sidebar(){
             </ul>
             <input type="range" min="0" max="10" />
         </Hotdeal>
-        
+        <Hotdeal>
+            <h1>Price</h1>
+            <Colors>
+                <li><GoPrimitiveDot /></li>
+                <li><GoPrimitiveDot /></li>
+                <li><GoPrimitiveDot /></li>
+                <li><GoPrimitiveDot /></li>
+                <li><GoPrimitiveDot /></li>
+                <li><GoPrimitiveDot /></li>
+                </Colors>  
+        </Hotdeal>
         <Hotdeal>
             <h1>Brand</h1>
             <ul>
@@ -65,6 +78,9 @@ export default function Sidebar(){
                 <li>22</li>
             </ul>
         </Hotdeal>
+        <Menubtn>
+                <NavLink to="/">MORE</NavLink>
+        </Menubtn>
         </>
     )
 } 
@@ -74,6 +90,7 @@ const Hotdeal = styled.div`
 background-color:#F6F7F8;
 padding:20px;
 margin:30px 0px;
+border-radius:5px;
 h1{
 font-family: 'Poppins';
 font-style: normal;
@@ -90,6 +107,7 @@ ul{
     list-style: none;
     margin: 14px 0px;
 }
+
 li{
     font-weight: 400;
 font-size: 18px;
@@ -104,5 +122,48 @@ li.range{
 }
 input[type="range"] {
     width: 100%;
+}
+`;
+const Colors = styled.ol`
+    display:flex;
+    list-style: none;
+    justify-content: space-between;
+li {
+    font-size: 30px;
+}
+li:nth-child(1){
+    color:#006CFF;
+    border:1px solid #006CFF;
+    border-radius:50%;
+}
+li:nth-child(2){
+    color:#FC3E39;
+}
+li:nth-child(3){
+    color:#171717;
+}
+li:nth-child(4){
+    color:#FFF600;
+}
+li:nth-child(5){
+    color:#FF00B4;
+}
+li:nth-child(6){
+    color:#EFDFDF;
+}
+`;
+const Menubtn = styled.div`
+background-color:#F6F7F8;
+margin:30px 0px;
+border-radius:5px;
+
+a{
+    padding: 20px 0px;
+    text-align: center;
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #262626;
 }
 `;
