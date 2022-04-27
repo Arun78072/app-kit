@@ -2,36 +2,29 @@ import styled from 'styled-components';
 import All from './Allproduct';
 import { Routes, Route, Outlet, NavLink } from "react-router-dom";
 
+
 export default function BestSeller() {
     return (
         <>
                 <Bestsellerr>
                     <h1>Best Seller</h1>
                     <ul>
-                        <li><NavLink to='/'>All</NavLink></li>
+                        <li><NavLink to='/all'>All</NavLink></li>
                         <li><NavLink to='/'>Bags</NavLink></li>
                         <li><NavLink to='/'>Sneakers</NavLink></li>
-                        <li><NavLink to='/'>Belt</NavLink></li>
+                        <li><NavLink to='/belts'>Belt</NavLink></li>
                         <li><NavLink to='/'>Sunglasses</NavLink></li>
                     </ul>
 
 
                 </Bestsellerr>
-                
                 <All />
+               
 
         </>
     )
 }
 
-function Layout() {
-  return (
-    <div>
-      <hr />
-      <Outlet />
-    </div>
-  );
-}
 
 // Styled cpomponent 
 

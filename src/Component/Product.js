@@ -17,7 +17,7 @@ export default function Product(prop) {
                 <Link to='/'><AiOutlineShoppingCart /></Link>
               </div>
             </Onhover>
-            <h1>{prop.title}</h1>
+            <Link to='/singleproduct'><h1>{prop.title}</h1></Link>
             <Star>
                 <li><AiFillStar /></li>
                 <li><AiFillStar /></li>

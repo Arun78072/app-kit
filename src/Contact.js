@@ -1,8 +1,11 @@
 import styled from 'styled-components';
+import Newsletter from './Component/Newsletter'
 import { Link } from 'react-router-dom';
+import Breadcum from './Component/Breadcum'
 export default function Contact(){
     return(
         <>
+        <Breadcum />
         <Form>
             <div>
                 <img src="./Images/call.png" />
@@ -17,14 +20,15 @@ export default function Contact(){
                     </section>
             </div>
             <div>
-            <label>Full Name</label>
-            <input type="text" placeholder="James Doe" />
-            <label>Email </label>
-            <input type='email' placeholder="jamesdoe@gmail.com"/>
-            <label>Message </label>
-            <input type="text" placeholder='Type your message' />
+                <label>Full Name</label>
+                <input type="text" placeholder="James Doe" />
+                <label>Email </label>
+                <input type='email' placeholder="jamesdoe@gmail.com"/>
+                <label>Message </label>
+                <textarea placeholder='Type your message' />
             </div>
         </Form>
+        <Newsletter />
         </>
     )
 }
@@ -36,7 +40,7 @@ display:grid;
 grid-template-columns: 1fr 1fr;
 position:relative;
 h1{
-    font-family: 'Raleway';
+font-family: 'Raleway';
 font-style: normal;
 font-weight: 600;
 font-size: 40px;
@@ -44,8 +48,7 @@ line-height: 47px;
 text-transform: lowercase;
 color: #FFFFFF;
 display:block;
-margin-bottom: 110px;
-}
+margin: 20px 0px 90px 0px;}
 p{
     display:block;
     margin: 30px 0px;
@@ -56,28 +59,49 @@ a{
 }
 img{
     position: absolute;
-    width: 500px;
+    width: 530px;
     top: 50%;
     left: -80px;
     transform: translateY(-50%);
 }
-
 section {
     margin-left: 50%;
 }
 div{
     padding:50px;
+    position:relative;
 }
 div:nth-child(1){
     background-color:var(--blue);
     display:flex;
+}
+div:nth-child(1)::after{
+    content: '';
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    background: #40bfff;
+    height: 80px;
+    border-radius: 50%;
 }
 label {
     display: block;
     margin: 24px 0px 5px;
 }
 input{
+    border: 1px solid #969393;
     width: 100%;
     padding: 16px;
+    border-radius: 4px;
+}
+textarea {
+     border-radius: 4px;
+    width: 100%;
+    height: 200px;
+    padding: 16px;
+    border: 1px solid #969393;
+
 }
 `;

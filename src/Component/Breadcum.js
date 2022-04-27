@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-export default function Pagebar(){
+export default function Breadcum(){
     return(
         <>
         <Bar>

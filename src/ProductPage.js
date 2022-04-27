@@ -2,15 +2,14 @@ import styled from 'styled-components'
 import ShoesSection from './Component/ShoesSection';
 import Product from './Component/Product';
 import Sidebar from './Component/Sidebar';
-import Pagebar from './Pagebar';
 import {BsFillGrid3X3GapFill} from 'react-icons/bs';
 import {GiHamburgerMenu} from 'react-icons/gi';
-
 import { NavLink } from 'react-router-dom';
+import Breadcum from './Component/Breadcum';
 export default function Products(){
     return(
         <>
-        <Pagebar />
+        <Breadcum />
         <PageDiv>
             <div className='div1'>
                 <Sidebar /> 
@@ -22,16 +21,16 @@ export default function Products(){
                     <li>13 Items</li>
                     <li>Sort by 
                     <select name="sort">
-                    <option value="volvo">Name</option>
-                    <option value="saab">Date</option>
-                    <option value="mercedes">Size</option>
+                    <option value="name">Name</option>
+                    <option value="date">Date</option>
+                    <option value="size">Size</option>
                     </select>
                     </li>
                     <li>Show
                     <select name="sort">
-                    <option value="volvo">12</option>
-                    <option value="saab">10</option>
-                    <option value="mercedes">8</option>
+                    <option value="12">12</option>
+                    <option value="10">10</option>
+                    <option value="8">8</option>
                     </select>
                     </li>
                 </ul>

@@ -6,9 +6,7 @@ export default function Highlights(){
             <Pro1>
             <img src="./Images/product.png" />
                 <h1>FS - QUILTED MAXI<br/> CROSS BAG </h1>
-                
                 <List>
-                
                 <li>$534,33</li>
                 <li>24% Off</li>
             </List>
@@ -64,6 +62,7 @@ position: absolute;
 `;
 const Pro1 = styled.div`
 position:relative;
+background-color:#fff;
 span{
   font-weight: 700;
   font-size: 18px;
@@ -76,6 +75,7 @@ span{
 `;
 const Pro2 = styled.div`
 position:relative;
+background-color:#fff;
 span{
   font-weight: 700;
   font-size: 18px;
@@ -88,6 +88,7 @@ span{
 `;
 const Pro3 = styled.div`
 position:relative;
+background-color:#fff;
 span{
   font-weight: 700;
   font-size: 18px;

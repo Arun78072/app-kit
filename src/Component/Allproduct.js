@@ -3,7 +3,7 @@ import Product from './Product';
 export default function All(){
     return(
         <>
-        <Productbox>
+                <Productbox>
                     <Product title="title 1"/>
                     <Product title="title 2"/>
                     <Product title="title 3"/>
