@@ -1,6 +1,22 @@
 import styled from 'styled-components'
+import React, { useEffect, useState } from 'react'
 
 export default function Highlights(){
+  const [data, setData] = useState([]);
+
+    const  appii = ()=>{
+        fetch('https://fakestoreapi.com/products')
+                .then(res=>res.json())
+                .then(json=>{
+                    console.log(json);
+                    setData(json);
+                });
+    };
+    useEffect(()=> {
+        appii();
+    },[])
+
+
     return(
         <Highlightsec>
             <Pro1>

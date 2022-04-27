@@ -11,9 +11,11 @@ import Addtocart from "./Addtocart";
 import Payment from './Payment'
 import Payment2 from './Payment2'
 import Payment3 from './Payment3'
+// import Api from "./Component/Api";
 function App() {
   return (
     <div>
+       {/* <Api /> */}
       <Header />
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -29,8 +31,6 @@ function App() {
         </Route>
       </Routes>
       <Footer />
-
-
     </div>
   );
 }

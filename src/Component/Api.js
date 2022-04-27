@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components';
 import { AiOutlineStar } from 'react-icons/ai';
 import { AiFillStar } from 'react-icons/ai';
@@ -6,18 +7,34 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { Link } from "react-router-dom";
 
 
-export default function Product(prop) {
-    return (
-            <>
-        <Products>
+export default function Api(){
+const [data, setData] = useState([]);
+
+    const  appii = ()=>{
+        fetch('https://fakestoreapi.com/products?limit=8')
+                .then(res=>res.json())
+                .then(json=>{
+                    console.log(json);
+                    setData(json);
+                });
+    };
+    useEffect(()=> {
+        appii();
+    },[])
+    return(
+        <>
+        <Mainsec>
+        {data.map((item)=>(
+            <li>
+            <Products>
             <Onhover>
-              <img src="./Images/product.png" />
+              <img src={item.image}/>
               <div>
                 <Link to="/"><AiOutlineHeart /></Link>
                 <Link to='/'><AiOutlineShoppingCart /></Link>
               </div>
             </Onhover>
-            <Link to='/singleproduct'><h1>{prop.title}</h1></Link>
+            <Link to='/singleproduct'><h1>{item.title}</h1></Link>
             <Star>
                 <li><AiFillStar /></li>
                 <li><AiFillStar /></li>
@@ -26,15 +43,26 @@ export default function Product(prop) {
                 <li><AiOutlineStar /></li>
             </Star>
             <List>
-                <li>$299,43</li>
+                <li>${item.price}</li>
                 <li>$534,33</li>
                 <li>24% Off</li>
             </List>
-      </Products>
-            </>
+            </Products>
+        </li>
+        ))}
+        </Mainsec>
+        </>
     )
 }
 //styled component 
+const Mainsec = styled.ul` 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style: none;
+    max-width: 1200px;
+    margin: auto;
+
+`;
 const Products = styled.div`
 border: 3px solid #F6F7F8;
   h1 {
@@ -46,17 +74,22 @@ border: 3px solid #F6F7F8;
   line-height: 150%;
   letter-spacing: 0.5px;
   color: #223263;
+  overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+   -webkit-box-orient: vertical;
+   height: 60px;
   }
  
 `;
-
 const Onhover = styled.div `
   position:relative;
-:hover div{
+    :hover div{
   /* display:flex; */
   visibility: visible;
-}
-div{
+    }
+    div{
   /* transition:all 0.3s; */
   visibility: hidden;
     /* display:none; */
@@ -71,6 +104,11 @@ div{
     transform: translate(-50%, -50%);
     width: 90%;
     height: 90%;
+    }
+    img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
     }
     svg {
     color: #33A0FF;
@@ -90,7 +128,6 @@ const Star = styled.ul`
     }
     
 `;
-
 const List = styled.ul`
   display: flex;
   justify-content: space-evenly;
@@ -114,12 +151,12 @@ const List = styled.ul`
   line-height: 150%;
   text-decoration-line: line-through;
   color: #9098B1;
-}
-li:nth-child(3) {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 150%;
-  color: #FB7181;
-}
+    }
+    li:nth-child(3) {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    color: #FB7181;
+    }
 `;
 

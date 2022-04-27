@@ -29,8 +29,11 @@ const Banners = styled.div`
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
-  font-size: 12vh;
-    line-height: 13vh;
+  font-size: 100px;
+  @media (max-width:768px){
+    font-size: 64px;
+  }
+
   }
   section{
       max-width:1200px;

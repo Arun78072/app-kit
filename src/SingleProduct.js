@@ -3,11 +3,12 @@ import { AiOutlineStar } from 'react-icons/ai';
 import { AiFillStar } from 'react-icons/ai';
 import { GoPrimitiveDot } from 'react-icons/go';
 import { AiOutlineHeart } from 'react-icons/ai';
-
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 import Breadcum from "./Component/Breadcum";
+
 export default function SingleProduct(){
+    
     return(
         <>
         <Breadcum />

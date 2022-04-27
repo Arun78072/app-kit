@@ -1,5 +1,9 @@
 import Addtocart from './Addtocart'
 import styled from 'styled-components'
+import { AiOutlineIdcard } from 'react-icons/ai';
+import { GrPaypal } from 'react-icons/gr';
+import { AiFillBank } from 'react-icons/ai';
+
 import {Link} from 'react-router-dom'
 export default function Payment(){
     return(
@@ -29,9 +33,11 @@ export default function Payment(){
                 </div>
                 <div>
                     <h1>Select Method of Payment</h1>
-                    <input type="radio" value="Male" name="gender" /> Credit Card Or Debit
-                    <input type="radio" value="Female" name="gender" /> Paypal
-                    <input type="radio" value="Other" name="gender" /> Bank Transfer              
+                    <Paymentmethod>
+                        <li><p><AiOutlineIdcard />Credit Card Or Debit</p> <input type="radio" value="credit" name="payment" /> </li>
+                        <li><p><GrPaypal />Paypal</p> <input type="radio" value="paypal" name="payment" /> </li>
+                        <li><p><AiFillBank />Bank Transfer</p> <input type="radio" value="bank" name="payment" /></li>       
+                    </Paymentmethod>
                 </div>
                 <div>
                     <input type="tel" placeholder='Mobile Phone'/>
@@ -46,6 +52,7 @@ export default function Payment(){
     )
 }
 // Style
+
 const Payments = styled.div`
     position: fixed;
     width: 100%;
@@ -88,7 +95,7 @@ const Payments = styled.div`
     align-items: center;
     justify-content: center;
 }
-li:nth-child(1){
+  section li:nth-child(1){
     background-color:var(--blue);
 }
 `;
@@ -125,5 +132,30 @@ a{
     color: #fff;
     font-weight: 600;
     font-size: 20px;
+}
+`;
+const Paymentmethod = styled.ul`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    li{
+        width: 100% !important;
+        justify-content: space-between !important;
+        display: flex !important;
+        background: none;
+    }
+    li:nth-child(1){
+        background: none!important;
+    }
+    p{
+        color:#000;
+    }
+    svg {
+        margin: 0px 10px;
+    vertical-align: middle;
+
+    }
+    input[type="radio"] {
+    width: fit-content;
 }
 `;

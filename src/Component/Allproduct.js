@@ -1,17 +1,19 @@
 import styled from 'styled-components';
+import Api from './Api';
 import Product from './Product';
 export default function All(){
     return(
         <>
                 <Productbox>
-                    <Product title="title 1"/>
+                    {/* <Product title="title 1"/>
                     <Product title="title 2"/>
                     <Product title="title 3"/>
                     <Product title="title 4"/>
                     <Product title="title 5"/>
                     <Product title="title 6"/>
                     <Product title="title 7"/>
-                    <Product title="title 8"/>
+                    <Product title="title 8"/> */}
+                    <Api />
                 </Productbox>
 
                 <Appbtn>
