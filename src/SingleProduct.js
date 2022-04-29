@@ -6,17 +6,45 @@ import { AiOutlineHeart } from 'react-icons/ai';
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 import Breadcum from "./Component/Breadcum";
+import React ,{useState ,useEffect}from 'react';
+import { useParams } from 'react-router';
 
 export default function SingleProduct(){
     
+    const {id} =useParams();
+    const [product, setProduct] = useState([]);
+    const [loading ,setLoading] = useState(false);
+    
+    useEffect(()=>{
+          const getProduct = async ()=>{
+              setLoading(true);
+              const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+            
+                  setProduct(await response.json());
+                  setLoading(false);
+              }
+             
+          getProduct();
+      },[]);
+    
+      const Loading =()=>{
+        return(
+            <>
+             <Load>Loading ....</Load>
+            </>
+        )
+    };
+    
+    
+    const ShowProduct =() =>{
     return(
         <>
-        <Breadcum />
+      <Breadcum />
         <Productsection>
             <div>
                 <Aboutproduct>
                     <div>  
-                        <img src="./Images/ProductImage.png" />
+                        <img src={product.image}/>
                         <ul>
                             <li><img src="./Images/Product-Picture02.png" /></li>
                             <li><img src="./Images/Product-Picture02.png" /></li>
@@ -25,7 +53,7 @@ export default function SingleProduct(){
                         </ul>
                     </div>
                     <div>
-                        <h1>Nike Airmax 270 React</h1>
+                        <h1>{product.title}</h1>
                     <ul>
                         <li>
                             <Stars>
@@ -41,7 +69,7 @@ export default function SingleProduct(){
                     </ul>
                     <hr />
                     <Lists>
-                        <li>$299,43</li>
+                        <li>${product.price}</li>
                         <li>$534,33</li>
                         <li>24% Off</li>
                     </Lists>
@@ -52,7 +80,7 @@ export default function SingleProduct(){
                         </tr>
                         <tr>
                             <td>Category:</td>
-                            <td>Accessories</td>
+                            <td>{product.category}</td>
                         </tr>
                         <tr>
                             <td>Free shipping</td>
@@ -97,8 +125,11 @@ export default function SingleProduct(){
                         <li><Link to="/">Share on twiter</Link></li>
                     </Sharebtn>
                     
+                    
                     </div>
                 </Aboutproduct>
+                <h1>Description</h1>
+                    <p>{product.description}</p>
             </div>
             <div className="bestseller">
                 <h1>Best Seller</h1>
@@ -115,11 +146,20 @@ export default function SingleProduct(){
             <li><Product title="title 1"/></li>
         </ul>
        </Relativeproduct>
+        </>
+    )
+    }
+    return(
+        <>
+        {loading ? <Loading/> : <ShowProduct/>}    
     </>
     )
 }
 
 // styled compoenent 
+const Load =styled.div`
+text-align:center;
+`;
 const Productsection = styled.section`
 max-width:1200px;
 margin:auto;
@@ -185,7 +225,7 @@ const Aboutproduct = styled.div`
     font-size: 24px;
     line-height: 36px;
     color: #22262A;
-    height:60px;
+    height:78px;
     }
     .addtocart{
         justify-content:space-between;

@@ -5,6 +5,7 @@ import { AiOutlineStar } from 'react-icons/ai';
 import { AiFillStar } from 'react-icons/ai';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { NavLink } from 'react-router-dom';
 
 const Products =()=>{
   const[data, setData] = useState([]);
@@ -32,7 +33,7 @@ const Products =()=>{
   const Loading =()=>{
       return(
           <>
-          <div>Loading ....</div>
+          <Load>Loading ....</Load>
           </>
       )
   };
@@ -45,6 +46,10 @@ const Products =()=>{
   const ShowProduct =() =>{
       return(
           <>
+                <Bestsellerr>
+                    <h1>Best Seller</h1>
+                </Bestsellerr>
+
           <Btns>
             <button onClick={()=>setFilter(data)}> All </button>
             <button onClick={()=>filterProduct("men's clothing")}> Men </button>
@@ -65,7 +70,7 @@ const Products =()=>{
                         <Link to='/'><AiOutlineShoppingCart /></Link>
                       </div>
                     </Onhover>
-                    <Link to='/singleproduct'><h1>{product.title}</h1></Link>
+                    <NavLink to={`/${product.id}`}><h1>{product.title}</h1></NavLink>
                     <Star>
                         <li><AiFillStar /></li>
                         <li><AiFillStar /></li>
@@ -102,7 +107,22 @@ const Products =()=>{
 export default Products;
 
 //style
-
+const Bestsellerr = styled.div`
+h1 {
+  padding-bottom: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 52px;
+  color: #22262A;
+}
+`;
+const Load =styled.div`
+text-align:center;
+`;
 const Btns = styled.div`
     text-align: center;
     margin-bottom:50px;

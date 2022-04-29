@@ -1,6 +1,6 @@
 
 import Banner from './Component/Banner';
-import BestSeller from './Component/BestSeller';
+import Products from './Component/Allproduct';
 import ShoesSection from './Component/ShoesSection';
 import Shipping from './Component/Shipping';
 import News from './Component/News';
@@ -13,7 +13,7 @@ export default function Home(){
         <>
         <Banner />
         <Highlights />
-        <BestSeller />
+        <Products />
         <ShoesSection />
         <Shipping />
         <News />

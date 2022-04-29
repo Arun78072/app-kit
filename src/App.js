@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { Switch, Routes, Route, Outlet, Link } from "react-router-dom";
 import Home from './Home'
 import Contact from './Contact'
 import Product from './ProductPage'
@@ -11,7 +11,8 @@ import Addtocart from "./Addtocart";
 import Payment from './Payment'
 import Payment2 from './Payment2'
 import Payment3 from './Payment3'
-// import Api from "./Component/Api";
+// import Testproduct from "./Component/Testproduct";
+
 function App() {
   return (
     <div>
@@ -23,11 +24,13 @@ function App() {
           <Route path="/product" element={<Product />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/belt" element={<Belt/>} />
-          <Route path="/singleproduct" element={<SingleProduct/>} />
+          <Route path="/:id" element={<SingleProduct/>} />
           <Route path='/addtocart' element={<Addtocart />} />
           <Route path='/payment' element={<Payment />}/>
           <Route path='/payment2' element={<Payment2 />}/>
           <Route path='/payment3' element={<Payment3 />}/>
+          {/* <Route path="/product/:id" element={<Testproduct/>} /> */}
+          {/* <Route exact path="/product/:id" component={Testproduct} /> */}
         </Route>
       </Routes>
       <Footer />
