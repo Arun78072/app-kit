@@ -10,7 +10,7 @@ export default function Footer() {
                 <Top>
                    <section>
                    <div>
-                        <h2><img src="./images/logo.png" /></h2>
+                        <h2><img src="./Images/Logo.png" /></h2>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.Since the 1500s, when an unknown printer.
                         </p>
