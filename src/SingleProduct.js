@@ -225,7 +225,6 @@ const Aboutproduct = styled.div`
     font-size: 24px;
     line-height: 36px;
     color: #22262A;
-    height:78px;
     }
     .addtocart{
         justify-content:space-between;
