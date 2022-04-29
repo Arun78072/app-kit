@@ -154,7 +154,7 @@ const Pro = styled.div`
                    display: -webkit-box;
                    -webkit-line-clamp: 2; /* number of lines to show */
                    -webkit-box-orient: vertical;
-                   height: 60px;
+                   height: 54px;
                   }
                  
                 `;
