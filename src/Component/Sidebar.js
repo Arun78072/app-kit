@@ -41,7 +41,7 @@ export default function Sidebar(){
             <input type="range" min="0" max="10" />
         </Hotdeal>
         <Hotdeal>
-            <h1>Price</h1>
+            <h1>Color</h1>
             <Colors>
                 <li><GoPrimitiveDot /></li>
                 <li><GoPrimitiveDot /></li>

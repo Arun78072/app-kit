@@ -9,18 +9,19 @@ import { Link } from "react-router-dom";
 
 export default function Api(){
 const [data, setData] = useState([]);
-
     const  appii = ()=>{
         fetch('https://fakestoreapi.com/products?limit=8')
                 .then(res=>res.json())
                 .then(json=>{
-                    console.log(json);
+                    // console.log(json);
                     setData(json);
                 });
     };
     useEffect(()=> {
         appii();
     },[])
+
+   
     return(
         <>
         <Mainsec>
@@ -61,7 +62,6 @@ const Mainsec = styled.ul`
     list-style: none;
     max-width: 1200px;
     margin: auto;
-
 `;
 const Products = styled.div`
 border: 3px solid #F6F7F8;

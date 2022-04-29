@@ -1,58 +1,48 @@
 import styled from 'styled-components'
 import ShoesSection from './Component/ShoesSection';
-import Product from './Component/Product';
+// import Product from './Component/Product';
 import Sidebar from './Component/Sidebar';
 import {BsFillGrid3X3GapFill} from 'react-icons/bs';
 import {GiHamburgerMenu} from 'react-icons/gi';
 import { NavLink } from 'react-router-dom';
 import Breadcum from './Component/Breadcum';
-export default function Products(){
+import Products from './Component/Allproduct';
+export default function Product(){
     return(
         <>
         <Breadcum />
         <PageDiv>
             <div className='div1'>
-                <Sidebar /> 
+                <Sidebar font="12px" /> 
             </div>
             <div>
                 <ShoesSection /> 
                 <Filter>
-                <ul>
-                    <li>13 Items</li>
-                    <li>Sort by 
-                    <select name="sort">
-                    <option value="name">Name</option>
-                    <option value="date">Date</option>
-                    <option value="size">Size</option>
-                    </select>
-                    </li>
-                    <li>Show
-                    <select name="sort">
-                    <option value="12">12</option>
-                    <option value="10">10</option>
-                    <option value="8">8</option>
-                    </select>
-                    </li>
-                </ul>
-                <ul>
-                    <li><BsFillGrid3X3GapFill /></li>
-                    <li><GiHamburgerMenu /></li>
-                </ul>
+                    <ul>
+                        <li>12 Items</li>
+                        <li>Sort by 
+                        <select name="sort">
+                        <option value="name">Name</option>
+                        <option value="date">Date</option>
+                        <option value="size">Size</option>
+                        </select>
+                        </li>
+                        <li>Show
+                        <select name="sort">
+                        <option value="12">12</option>
+                        <option value="10">10</option>
+                        <option value="8">8</option>
+                        </select>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><BsFillGrid3X3GapFill /></li>
+                        <li><GiHamburgerMenu /></li>
+                    </ul>
                 </Filter>
  
                 <ProductBox className='customepro'>
-                    <Product title="title 1"/>
-                    <Product title="title 2"/>
-                    <Product title="title 3"/>
-                    <Product title="title 4"/>
-                    <Product title="title 5"/>
-                    <Product title="title 6"/>
-                    <Product title="title 7"/>
-                    <Product title="title 8"/>
-                    <Product title="title 9"/>
-                    <Product title="title 10"/>
-                    <Product title="title 11"/>
-                    <Product title="title 12"/>
+                    <Products />
                 </ProductBox>
                 <Numberbar>
                     <NavLink to="/">1</NavLink>
@@ -77,22 +67,23 @@ display:flex;
 justify-content:center;
 gap:20px;
 .div1{
+    width: 100%;
     margin-top: 70px;
-    width:100%;
+    max-width: 300px;
     @media (max-width:768px){
         display:none;
     }
 }
 .customepro > div{
-    width:280px;
+    /* width:280px; */
 }
 img{
     width:100%;
 }
 `;
 const ProductBox = styled.div`
-display:flex;
-gap: 20px;
+    display:flex;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
 `;

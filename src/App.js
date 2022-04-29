@@ -2,7 +2,7 @@ import * as React from "react";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import Home from './Home'
 import Contact from './Contact'
-import Products from './ProductPage'
+import Product from './ProductPage'
 import Header from './Component/Header'
 import Footer from './Component/Footer';
 import Belt from "./Belt";
@@ -20,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/product" element={<Products />} />
+          <Route path="/product" element={<Product />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/belt" element={<Belt/>} />
           <Route path="/singleproduct" element={<SingleProduct/>} />

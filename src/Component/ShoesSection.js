@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import '../index.css';
-export default function ShoesSection() {
+export default function ShoesSection({font}) {
     return (
             <Adidashoes>
                 <div>
@@ -31,7 +31,7 @@ const Adidashoes = styled.div`
   max-width: 600px;
     width: 100%;
   }
-h1 {
+  h1 {
   font-weight: 500;
   font-size: 56px;
     line-height: 52px;
@@ -40,8 +40,8 @@ h1 {
     font-size: 40px;
     line-height: 44px;
   }
-}
-p {
+  }
+  p {
   font-weight: 400;
   font-size: 24px;
   line-height: 36px;
