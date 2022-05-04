@@ -9,33 +9,51 @@ import Breadcum from "./Component/Breadcum";
 import React ,{useState ,useEffect}from 'react';
 import { useParams } from 'react-router';
 
+import {useSelector , useDispatch} from 'react-redux'
+import {addCart} from './redux/action';
+
+
 export default function SingleProduct(){
     
+
     const {id} =useParams();
     const [product, setProduct] = useState([]);
     const [loading ,setLoading] = useState(false);
     
+const dispatch = useDispatch();
+const addProduct = (product)=>{
+dispatch(addCart(product));
+}
+
     useEffect(()=>{
           const getProduct = async ()=>{
               setLoading(true);
               const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-            
                   setProduct(await response.json());
                   setLoading(false);
               }
-             
           getProduct();
       },[]);
-    
       const Loading =()=>{
         return(
             <>
              <Load>Loading ....</Load>
             </>
         )
+    };   
+
+    const [incr,setIncr] = useState(0)
+    const inc = () =>{
+        if(incr > 0){
+            setIncr(incr - 1);
+        }else{
+            setIncr(0)
+        }
     };
-    
-    
+    const dec = () =>{
+            setIncr(incr + 1);
+    };
+
     const ShowProduct =() =>{
     return(
         <>
@@ -64,7 +82,7 @@ export default function SingleProduct(){
                                 <li><AiOutlineStar /></li>
                             </Stars>
                     </li>
-                    <li>0 reviews</li>
+                    <li> Rating { product.rating && product.rating.rate}</li>
                     <li>Submit a review</li>
                     </ul>
                     <hr />
@@ -88,7 +106,6 @@ export default function SingleProduct(){
                         </tr>
                     </tabel>
                     <hr />
-
                     <tabel>
                         <tr>
                             <td>Select Color </td>
@@ -115,9 +132,12 @@ export default function SingleProduct(){
                     <hr />
                     <ul className="addtocart">
                         <li>
-                            <button>-</button> 2 <button>+</button>
+                            <button onClick={inc}>-</button> {incr} <button onClick={dec}>+</button>
                         </li>
-                        <li><Link to="/addtocart">Add to Cart</Link> <AiOutlineHeart /></li>
+                        <li>
+                            {/* <Link to="/addtocart">Add to Cart</Link>  */}
+                            <button onClick={()=> addProduct(product)}>add to cart </button>
+                            <AiOutlineHeart /></li>
                     </ul>
                    
                     <Sharebtn>

@@ -11,12 +11,11 @@ import Addtocart from "./Addtocart";
 import Payment from './Payment'
 import Payment2 from './Payment2'
 import Payment3 from './Payment3'
-// import Testproduct from "./Component/Testproduct";
+import Cart from "./Component/Cart";
 
 function App() {
   return (
     <div>
-       {/* <Api /> */}
       <Header />
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -29,8 +28,7 @@ function App() {
           <Route path='/payment' element={<Payment />}/>
           <Route path='/payment2' element={<Payment2 />}/>
           <Route path='/payment3' element={<Payment3 />}/>
-          {/* <Route path="/product/:id" element={<Testproduct/>} /> */}
-          {/* <Route exact path="/product/:id" component={Testproduct} /> */}
+          <Route path='/cart' element={<Cart />} />
         </Route>
       </Routes>
       <Footer />

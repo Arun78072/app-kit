@@ -6,9 +6,13 @@ import { IoMdArrowDropdown } from 'react-icons/io';
 import { BiMenu } from 'react-icons/bi';
 import { Routes, Route, Outlet, NavLink } from "react-router-dom";
 import React,{useState, useEffect} from 'react';
+import {useSelector} from 'react-redux';
+
 
 
 export default function Header(){
+const state= useSelector((state)=> state.handleCart)
+
     const [toggleMenu, setToggleMenu] = useState(false)
     const [screenWidth, setScreenWidth] = useState(window.innerWidth)
     const toggleNav = () => {
@@ -39,7 +43,7 @@ export default function Header(){
                     <div>
                         <ul>
                             <li><AiOutlineUser />My Profile</li>
-                            <li><AiOutlineShoppingCart /><span>2</span></li>
+                            <li><NavLink to='/cart'><AiOutlineShoppingCart /><span> {state.length}</span> </NavLink></li>
                             <li>Items</li>
                             <li>$00.00</li>
                             <li>< BiSearchAlt2 /></li>
