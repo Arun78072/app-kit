@@ -12,7 +12,6 @@ const Products =()=>{
   const[filter, setFilter] = useState(data);
   const[loading, setLoading]= useState(false);
   let componentMounted= true;
-  
   useEffect(()=>{
       const getProduct = async ()=>{
           setLoading(true);
@@ -232,16 +231,16 @@ const Star = styled.ul`
                     }
                 `;
 const Mainsec = styled.ul` 
-        display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1200px;
-    margin: auto;
-    list-style: none;
-    gap:10px;
-    li {
-    max-width: 290px;
-}
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  list-style: none;
+  gap:10px;
+  li {
+    width: 280px;
+  }
 `;
 const Appbtn = styled.div`
     text-align: center;

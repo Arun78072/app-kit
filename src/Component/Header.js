@@ -33,11 +33,22 @@ const state= useSelector((state)=> state.handleCart)
         <>
             <div className="container">
                 <Top>
-                  
                     <div>
                             <ul>
-                                <li>EN <IoMdArrowDropdown /></li>
-                                <li>USD <IoMdArrowDropdown /></li>
+                                <li>
+                                  <select name="sort">
+                                      <option value="xs">EN</option>
+                                      <option value="m">HN</option>
+                                      <option value="l">US</option>
+                                  </select>
+                                </li>
+                                <li>
+                                  <select name="sort">
+                                      <option value="xs">USD</option>
+                                      <option value="m">HN</option>
+                                      <option value="l">US</option>
+                                  </select>  
+                                </li>
                             </ul>
                     </div>
                     <div>
@@ -56,7 +67,7 @@ const state= useSelector((state)=> state.handleCart)
                     </div>
                     <div>
                     {(toggleMenu || screenWidth > 768) && (
-                            <>
+                        <>
                           <ul>
                             <li><NavLink to="/">Home</NavLink></li>
                              <li className="dropdown"><a href="/">Bags</a>
@@ -108,7 +119,6 @@ const state= useSelector((state)=> state.handleCart)
                          </ul>
                          </>
                        )}
-
                         <Hamburger>
                         <button onClick={toggleNav}><BiMenu/></button>
                         </Hamburger>
@@ -140,16 +150,16 @@ svg {
 }
 `;
 const Top = styled.div`
-display: flex;
-padding:20px;
+  display: flex;
+  padding:20px;
   justify-content: space-between;
   align-items: center;
   flex-wrap:wrap;
   ul{
     list-style: none;
-  display: flex;
-  gap: 10px;
-  align-items: center;
+    display: flex;
+    gap: 20px;
+    align-items: center;
   }
   li{
     position: relative;
@@ -167,7 +177,11 @@ padding:20px;
   border-radius: 50%;
   font-weight: 600;
   color: #fff;
-}
+  }
+  select, select:focus-visible {
+    border: none;
+  }
+  
 .carticon svg{
   font-size:24px;
 }
@@ -205,16 +219,16 @@ const Navbar = styled.nav`
   }
   li{
     text-transform: uppercase;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 36px;
-  color: #262626;
-  padding:0px 15px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 36px;
+    color: #262626;
+    padding:0px 15px;
   }
   .active{
-    color:red;
+    color:#40BFFF;
   }
   a:hover Onhover {
     display:none;

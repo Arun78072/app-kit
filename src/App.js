@@ -39,7 +39,6 @@ function App() {
 function Layout() {
   return (
     <div>
-      <hr />
       <Outlet />
     </div>
   );

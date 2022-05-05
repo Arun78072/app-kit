@@ -64,34 +64,54 @@ flex-wrap: wrap;
 gap:0px;
 h1{
     font-family: 'Poppins';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 150%;
-letter-spacing: 0.5px;
-color: #223263;
-position: absolute;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #223263;
+    position: absolute;
     top: 10px;
-    left: 10px;
+    left: 26px;
 
 }
 `;
 const Pro1 = styled.div`
-position:relative;
-background-color:#fff;
+    padding: 0px 40px;
+    border-radius: 5px 0px 0px 5px;
+    position: relative;
+    background-color: #f6f6f6;
+    transition: all 0.5s;
+&:hover{
+  background-color:#dddddd;
+}
+&:hover img{
+  filter: brightness(0.9);
+}
 span{
   font-weight: 700;
   font-size: 18px;
   line-height: 180%;
   color: #40BFFF;
   bottom: 20px;
-    right: 0px;
-    position:absolute;
+  right: 20px;
+  position:absolute;
   }
+img{
+  transition: all 0.5s;
+  max-width: 220px;
+}
 `;
 const Pro2 = styled.div`
-position:relative;
-background-color:#fff;
+    padding: 0px 40px;
+    position: relative;
+    background-color: #f6f6f6;
+    transition: all 0.5s;
+&:hover{
+  background-color:#dddddd;
+}
+&:hover img{
+  filter: brightness(0.9);
+}
 span{
   font-weight: 700;
   font-size: 18px;
@@ -99,21 +119,38 @@ span{
   color: #40BFFF;
   position:absolute;
   top: 10px;
-    right: 10px;
+  right: 20px;
   }
+img{
+  transition: all 0.5s;
+  max-width: 220px;
+}
 `;
 const Pro3 = styled.div`
-position:relative;
-background-color:#fff;
+  padding: 0px 40px;
+  position: relative;
+  background-color: #f6f6f6;
+  border-radius: 0px 5px 0px 0px;
+  transition: all 0.5s;
+&:hover{
+  background-color:#dddddd;
+}
+&:hover img{
+  filter: brightness(0.9);
+}
 span{
   font-weight: 700;
   font-size: 18px;
   line-height: 180%;
   color: #40BFFF;
   position:absolute;
-  bottom: 30px;
-    right: 12px;
+  bottom: 20px;
+  right: 20px;
   }
+img{
+  transition: all 0.5s;
+  max-width: 220px;
+}
 `;
 const List = styled.ul`
   display: flex;
@@ -121,9 +158,8 @@ const List = styled.ul`
   align-items: center;
   list-style: none;
   position: absolute;
-    bottom: 15px;
-    left: 15px;
-
+  bottom: 15px;
+  left: 26px;
   li{
   font-family: 'Poppins';
   font-style: normal;
