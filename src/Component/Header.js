@@ -43,7 +43,7 @@ const state= useSelector((state)=> state.handleCart)
                     <div>
                         <ul>
                             <li><AiOutlineUser />My Profile</li>
-                            <li><NavLink to='/cart'><AiOutlineShoppingCart /><span> {state.length}</span> </NavLink></li>
+                            <li className='carticon'> <NavLink to='/cart'><p>Cart</p> <AiOutlineShoppingCart /><span> {state.length}</span> </NavLink></li>
                             <li>Items</li>
                             <li>$00.00</li>
                             <li>< BiSearchAlt2 /></li>
@@ -160,13 +160,21 @@ padding:20px;
   font-size: 12px;
   position: absolute;
   background: var(--red);
-  left: 10px;
+  right: -5px;
   width: 16px;
   top: -8px;
   text-align: center;
   border-radius: 50%;
   font-weight: 600;
   color: #fff;
+}
+.carticon svg{
+  font-size:24px;
+}
+.carticon a {
+  display: flex;
+  align-items: center;
+  color: #000;
 }
 `;
 const Navbar = styled.nav`

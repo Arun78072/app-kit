@@ -16,9 +16,9 @@ const Cart = () => {
 
     const emptyCart = () => {
         return(
-            <div className="px-4 my-5 bg-light rounded-3 py-5">
-                <div className="container py-4">
-                    <div className="row">
+            <div>
+                <div>
+                    <div>
                         <h3>Your Cart is Empty</h3>
                     </div>
                 </div>
@@ -28,21 +28,21 @@ const Cart = () => {
     const cartItems = (product) => {
         return(
             <>
-                <div className="px-4 my-5 bg-light rounded-3 py-5">
-                <div className="container py-4">
-                    <div className="row justify-content-center">
-                        <div className="col-md-4">
+                <div>
+                <div>
+                    <div>
+                        <div>
                             <img src={product.image} alt={product.title} height="200px" width="180px" />
                         </div>
-                        <div className="col-md-4">
+                        <div>
                             <h3>{product.title}</h3>
-                            <p className="lead fw-bold">
+                            <p>
                                 {product.qty} X ${product.price} = ${product.qty * product.price}
                             </p>
-                            <button className="btn btn-outline-dark me-4" onClick={()=>handleDel(product)}>
+                            <button onClick={()=>handleDel(product)}>
                                 <i className="fa fa-minus"></i>
                             </button>
-                            <button className="btn btn-outline-dark" onClick={()=> handleAdd(product)}>
+                            <button onClick={()=> handleAdd(product)}>
                                 <i className="fa fa-plus"></i>
                             </button>
                         </div>
@@ -56,9 +56,9 @@ const Cart = () => {
     const buttons = () => {
         return(
             <>
-                <div className="container">
-                    <div className="row">
-                        <NavLink to="/checkout" className="btn btn-outline-dark mb-5 w-25 mx-auto">
+                <div>
+                    <div>
+                        <NavLink to="/checkout">
                             Proceed to Checkout
                         </NavLink>
                     </div>

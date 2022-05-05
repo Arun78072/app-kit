@@ -135,8 +135,7 @@ dispatch(addCart(product));
                             <button onClick={inc}>-</button> {incr} <button onClick={dec}>+</button>
                         </li>
                         <li>
-                            {/* <Link to="/addtocart">Add to Cart</Link>  */}
-                            <button onClick={()=> addProduct(product)}>add to cart </button>
+                            <button onClick={()=> addProduct(product)} className="cartbtn">Add to cart </button>
                             <AiOutlineHeart /></li>
                     </ul>
                    
@@ -253,12 +252,15 @@ const Aboutproduct = styled.div`
     .addtocart li:nth-child(1){
         background: #F6F7F8;
     }
-    .addtocart li:nth-child(2) a {
-    background: #33A0FF;
+    .cartbtn {
+    background: #33A0FF!important;
     color: #fff;
-    padding: 12px 20px;
+    padding: 12px 20px !important;
     display: inline-block;
-    margin:0px 10px
+    margin: 0px 10px;
+    font-size: 18px!important;
+    cursor: pointer;
+
     }
     .addtocart li {
     align-items: center;
