@@ -104,7 +104,8 @@ export default Products;
 
 //style
 const Bestsellerr = styled.div`
-h1 {
+  margin-top: 60px;
+  h1 {
   padding-bottom: 40px;
   text-transform: uppercase;
   text-align: center;
@@ -114,122 +115,123 @@ h1 {
   font-size: 35px;
   line-height: 52px;
   color: #22262A;
-}
+  }
 `;
 const Load =styled.div`
 text-align:center;
 `;
 const Btns = styled.div`
-    text-align: center;
-    margin-bottom:50px;
+  text-align: center;
+  margin-bottom:50px;
   button {
-    cursor: pointer;
-    color: var(--blue);
-    font-size: 22px;
-    font-weight: 500;
-    padding: 0px 10px;
-    margin: 0px 8px;
-    border: none;
-    background: none;
-}
+  cursor: pointer;
+  color: var(--blue);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0px 10px;
+  margin: 0px 8px;
+  border: none;
+  background: none;
+  }
 `;
 
 const Pro = styled.div`
-                border: 3px solid #F6F7F8;
-                  h1 {
-                    font-family: 'Poppins';
-                  font-style: normal;
-                  font-weight: 700;
-                  text-align: center;
-                  font-size: 18px;
-                  line-height: 150%;
-                  letter-spacing: 0.5px;
-                  color: #223263;
-                  overflow: hidden;
-                   text-overflow: ellipsis;
-                   display: -webkit-box;
-                   -webkit-line-clamp: 2; /* number of lines to show */
-                   -webkit-box-orient: vertical;
-                   height: 54px;
-                  }
-                 
-                `;
- const Onhover = styled.div `
-                  position:relative;
-                    :hover div{
-                  /* display:flex; */
-                  visibility: visible;
-                    }
-                    div{
-                  /* transition:all 0.3s; */
-                  visibility: hidden;
-                    /* display:none; */
-                      background-color:#fffffff5;
-                      display:flex;
-                      justify-content:center;
-                      gap:20px;
-                      align-items:center;
-                      position:absolute;
-                      top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 96%;
-                    height: 96%;
-                    }
-                    img {
-                    width: 100%;
-                    height: 300px;
-                    object-fit: contain;
-                    }
-                    svg {
-                    color: #33A0FF;
-                    border: 2px solid #33a0ff7a;
-                    padding: 10px;
-                    font-size: 40px;
-                    border-radius: 50%;
-                }
+  border: 3px solid #F6F7F8;
+  padding-bottom: 20px;
+  border-radius: 5px;
+  h1 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  color: #223263;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  height: 50px;
+  }
+`;
+const Onhover = styled.div `
+  position:relative;
+  text-align: center;
+  :hover div{
+  visibility: visible;
+  }
+  div{
+  visibility: hidden;
+  background-color:#fffffff5;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  align-items:center;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 96%;
+  height: 96%;
+  }
+  img {
+  padding:14px;
+  width: 230px;
+  height: 230px;
+  object-fit: contain;
+  }
+  svg {
+  color: #33A0FF;
+  border: 2px solid #33a0ff7a;
+  padding: 10px;
+  font-size: 40px;
+  border-radius: 50%;
+  }
 `;
 const Star = styled.ul`
-                    display: flex;
-                    justify-content: center;
-                    list-style: none;
-                    gap: 18px;
-                    li{
-                      color:#FFC600;
-                    }
-                    
-                `;
- const List = styled.ul`
-                  display: flex;
-                  justify-content: space-evenly;
-                  align-items: center;
-                  list-style: none;
-                
-                  li{
-                  font-family: 'Poppins';
-                  font-style: normal;
-                  letter-spacing: 0.5px;
-                  }
-                  li:nth-child(1){
-                  font-weight: 700;
-                  font-size: 18px;
-                  line-height: 180%;
-                  color: #40BFFF;
-                  }
-                  li:nth-child(2) {
-                  font-weight: 400;
-                  font-size: 14px;
-                  line-height: 150%;
-                  text-decoration-line: line-through;
-                  color: #9098B1;
-                    }
-                    li:nth-child(3) {
-                    font-weight: 700;
-                    font-size: 14px;
-                    line-height: 150%;
-                    color: #FB7181;
-                    }
-                `;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 18px;
+  li{
+  color:#FFC600;
+  width: 20px !important;
+  }
+ `;
+const List = styled.ul`
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  list-style: none;
+  gap: 8px;
+  li{
+  font-family: 'Poppins';
+  font-style: normal;
+  letter-spacing: 0.5px;
+  width: fit-content !important;
+  }
+  li:nth-child(1){
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 180%;
+  color: #40BFFF;
+  }
+  li:nth-child(2) {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-decoration-line: line-through;
+  color: #9098B1;
+  }
+  li:nth-child(3) {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  color: #FB7181;
+  }
+`;
 const Mainsec = styled.ul` 
   display: flex;
   flex-wrap: wrap;
@@ -240,13 +242,17 @@ const Mainsec = styled.ul`
   gap:10px;
   li {
     width: 280px;
+    transition:all 0.5s;
+  }
+  li:hover{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   }
 `;
 const Appbtn = styled.div`
-    text-align: center;
-    padding: 30px;
+  text-align: center;
+  padding: 30px;
   a {
-    color: #33A0FF;
+  color: #33A0FF;
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;

@@ -222,7 +222,7 @@ const Aboutproduct = styled.div`
     }
     div:nth-child(1) ul{
         justify-content: space-evenly;
-            margin-top: 100px;
+        margin-top: 100px;
     }
     td {
         height: 40px;

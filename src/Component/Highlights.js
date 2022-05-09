@@ -43,7 +43,7 @@ export default function Highlights(){
             <img src="./Images/product.png" />
             <h1>FS - QUILTED MAXI <br/>CROSS BAG </h1>
             <List>
-                            <li>$534,33</li>
+                <li>$534,33</li>
                 <li>24% Off</li>
             </List>
             <span>$299,43</span>
@@ -160,6 +160,7 @@ const List = styled.ul`
   position: absolute;
   bottom: 15px;
   left: 26px;
+  gap:8px;
   li{
   font-family: 'Poppins';
   font-style: normal;
@@ -178,5 +179,5 @@ li:nth-child(2) {
   font-size: 14px;
   line-height: 150%;
   color: #FB7181;
-}
+  }
 `;
