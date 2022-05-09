@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 import '../index.css';
+
+import gsap from "gsap";
+
+
 export default function ShoesSection({font}) {
     return (
     <Adidashoes>
@@ -32,7 +36,9 @@ const Adidashoes = styled.div`
   margin-top: -110px;
   max-width: 600px;
   width: 100%;
-  
+  position: relative;
+  animation: shoesec 4s;
+  animation-iteration-count: infinite;
   }
   h1 {
   font-weight: 500;
@@ -43,7 +49,14 @@ const Adidashoes = styled.div`
   @media (max-width:600px){
   font-size: 40px;
   line-height: 44px;
-  animation-iteration-count: infinite;
+  }
+  }
+  @keyframes shoesec {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 20px;
   }
   }
   p {
@@ -57,14 +70,7 @@ const Adidashoes = styled.div`
   color: #FFFFFF;
   line-height: 30px;
 }
-@keyframes mymove {
-  0%, 100% {
-    bottom: 0;
-  }
-  50% {
-    bottom: 20px;
-  }
-}
+
 hr {
   width: 85px;
   border: 0.5px solid #ffffffc7;

@@ -1,60 +1,6 @@
 import styled from 'styled-components'
 import React, { useEffect, useState } from 'react'
 
-export default function Highlights(){
-  const [data, setData] = useState([]);
-
-    const  appii = ()=>{
-        fetch('https://fakestoreapi.com/products')
-                .then(res=>res.json())
-                .then(json=>{
-                    console.log(json);
-                    setData(json);
-                });
-    };
-    useEffect(()=> {
-        appii();
-    },[])
-
-
-    return(
-        <Highlightsec>
-            <Pro1>
-            <img src="./Images/product.png" />
-                <h1>FS - QUILTED MAXI<br/> CROSS BAG </h1>
-                <List>
-                <li>$534,33</li>
-                <li>24% Off</li>
-            </List>
-            <span>$299,43</span>
-            </Pro1>
-            <Pro2>
-            <img src="./Images/product.png" />
-            <h1>FS - QUILTED MAXI <br/>CROSS BAG </h1>
-                
-                <List>
-                
-                <li>$534,33</li>
-                <li>24% Off</li>
-            </List>
-            <span>$299,43</span>
-            </Pro2>
-            <Pro3>
-            <img src="./Images/product.png" />
-            <h1>FS - QUILTED MAXI <br/>CROSS BAG </h1>
-            <List>
-                <li>$534,33</li>
-                <li>24% Off</li>
-            </List>
-            <span>$299,43</span>
-                
-                
-
-            </Pro3>
-        </Highlightsec>
-    )
-}
-//  style
 
 const Highlightsec = styled.div`
 display:flex;
@@ -62,6 +8,16 @@ justify-content:center;
 margin-top: -100px;
 flex-wrap: wrap;
 gap:0px;
+position:relative;
+animation : updown 3s;
+@keyframes updown {
+  0%{
+    bottom:-100px;
+  }
+  100%{
+    bottom:0px;
+  }
+}
 h1{
     font-family: 'Poppins';
     font-style: normal;
@@ -72,7 +28,7 @@ h1{
     position: absolute;
     top: 10px;
     left: 26px;
-
+    animation : updown 3s;
 }
 `;
 const Pro1 = styled.div`
@@ -181,3 +137,59 @@ li:nth-child(2) {
   color: #FB7181;
   }
 `;
+
+
+export default function Highlights(){
+  const [data, setData] = useState([]);
+
+    const  appii = ()=>{
+        fetch('https://fakestoreapi.com/products')
+                .then(res=>res.json())
+                .then(json=>{
+                    console.log(json);
+                    setData(json);
+                });
+    };
+    useEffect(()=> {
+        appii();
+    },[])
+
+
+    return(
+        <Highlightsec>
+            <Pro1>
+            <img src="./Images/product.png" />
+                <h1>FS - QUILTED MAXI<br/> CROSS BAG </h1>
+                <List>
+                <li>$534,33</li>
+                <li>24% Off</li>
+            </List>
+            <span>$299,43</span>
+            </Pro1>
+            <Pro2>
+            <img src="./Images/product.png" />
+            <h1>FS - QUILTED MAXI <br/>CROSS BAG </h1>
+                
+                <List>
+                
+                <li>$534,33</li>
+                <li>24% Off</li>
+            </List>
+            <span>$299,43</span>
+            </Pro2>
+            <Pro3>
+            <img src="./Images/product.png" />
+            <h1>FS - QUILTED MAXI <br/>CROSS BAG </h1>
+            <List>
+                <li>$534,33</li>
+                <li>24% Off</li>
+            </List>
+            <span>$299,43</span>
+                
+                
+
+            </Pro3>
+        </Highlightsec>
+    )
+}
+//  style
