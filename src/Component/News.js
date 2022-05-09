@@ -1,12 +1,25 @@
 import styled from 'styled-components';
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function News(){ 
+
+    useEffect(() => {
+        AOS.init({
+            duration : 2000
+        });
+        AOS.refresh();
+      }, []);
+
     return(
         <>
         <Container>
         <Heading>LATEST NEWS</Heading>
-            <Newssec>
-                <NewsSlide>
+            <Newssec data-aos="fade-up" data-aos-offset='100'
+     data-aos-anchor-placement="bottom-bottom">
+                <NewsSlide >
+                    
                     <div>
                         <img src="./Images/nike.png" />
                     </div>

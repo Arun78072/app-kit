@@ -1,9 +1,23 @@
 import styled from 'styled-components';
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function Shipping(){ 
+
+    useEffect(() => {
+        AOS.init({
+            duration : 2000
+        });
+        AOS.refresh();
+      }, []);
+
+
     return(
         <>
         <Container>
-            <ShipSec >
+            <ShipSec data-aos="fade-up" data-aos-offset='100'
+     data-aos-anchor-placement="bottom-bottom">
                 <div>
                     <img src="./Images/shipping.png" />
                     <h1>FREE SHIPPING</h1>
@@ -28,13 +42,14 @@ export default function Shipping(){
 const Container = styled.div`
     max-width: 1200px;
     margin: auto;
+
 `;
 const ShipSec = styled.div`
     display:flex;
     justify-content: space-around;
     padding: 100px 20px;
     flex-wrap: wrap;
-    gap: 20px;    
+    gap: 20px;       
     div{
         text-align:center;
         max-width:200px;

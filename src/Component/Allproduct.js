@@ -63,7 +63,7 @@ const Products =()=>{
                       <img src={product.image}/>
                       <div>
                         <Link to="/"><AiOutlineHeart /></Link>
-                        <Link to='/'><AiOutlineShoppingCart /></Link>
+                        <Link to={`/${product.id}`}><AiOutlineShoppingCart /></Link>
                       </div>
                     </Onhover>
                     <NavLink to={`/${product.id}`}><h1>{product.title}</h1></NavLink>

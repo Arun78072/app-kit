@@ -1,15 +1,28 @@
 import styled from 'styled-components';
 import { AiOutlineStar } from 'react-icons/ai';
 import { AiFillStar } from 'react-icons/ai';
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 export default function Feature(){ 
+
+    useEffect(() => {
+        AOS.init({
+            duration : 2000
+        });
+        AOS.refresh();
+      }, []);
+
+
     return(
         <>
         <Container>
             <Heading>FEATURED PRODUCTS</Heading>
             <Featuresec>
 
-                <FeatureSlide>
+                <FeatureSlide data-aos="zoom-out-right" data-aos-offset='100'>
                     <div>
                         <img src="./Images/Vector.png" />
                     </div>
@@ -28,7 +41,7 @@ export default function Feature(){
                         </List>
                     </div>
                 </FeatureSlide>
-                <FeatureSlide>
+                <FeatureSlide data-aos="zoom-out" data-aos-offset='100'>
                     <div>
                         <img src="./Images/Vector.png" />
                     </div>
@@ -47,7 +60,7 @@ export default function Feature(){
                         </List>
                     </div>
                 </FeatureSlide>
-                <FeatureSlide>
+                <FeatureSlide data-aos="zoom-out-left" data-aos-offset='100'>
                     <div>
                         <img src="./Images/Vector.png" />
                     </div>

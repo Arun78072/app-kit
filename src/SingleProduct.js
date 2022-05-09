@@ -198,6 +198,11 @@ const Aboutproduct = styled.div`
     @media (max-width:768px){
         flex-wrap: wrap;
     }
+    div >img{
+        position: relative;
+        animation: shoesec 3s;
+        animation-iteration-count: infinite;
+    }
     div:nth-child(1){
         padding: 12px;
         width: 100%;
@@ -206,6 +211,15 @@ const Aboutproduct = styled.div`
             padding: 15px;
         }
     }
+    @keyframes shoesec {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 20px;
+  }
+  }
+   
     div:nth-child(1) img{
         width:100%;
     }
