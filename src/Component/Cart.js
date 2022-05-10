@@ -3,11 +3,11 @@ import {useSelector, useDispatch} from 'react-redux'
 import { NavLink } from 'react-router-dom';
 import { addCart, delCart } from '../redux/action';
 import styled from 'styled-components'
+import { ImCross } from 'react-icons/im';
 
 const Cart = () => {
     const state = useSelector((state)=> state.handleCart)
     const dispatch = useDispatch()
-
     const handleAdd = (item) => {
         dispatch(addCart(item))
     }
@@ -42,7 +42,7 @@ const Cart = () => {
         return(
             <>
                 <tr>
-                    <td>*</td>
+                    <td><button onClick={()=>handleDel(product)} className="cancleBtn"> <ImCross /> </button></td>
                     <td><div><img src={product.image} alt={product.title} height="200px" width="180px"/> {product.title}</div></td>
                     <td>${product.price}</td>
                     <td><button onClick={()=>handleDel(product)}>-</button> {product.qty} <button onClick={()=> handleAdd(product)}>+</button></td>
@@ -194,6 +194,11 @@ tr {
     grid-template-columns: 0.1fr 2fr 1fr 1fr 1fr;
     padding: 35px 0px;
     gap:10px;
+}
+button.cancleBtn {
+    font-size: 12px;
+    cursor: pointer;
+    color: red;
 }
 button{
     padding: 20px;

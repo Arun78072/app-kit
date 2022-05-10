@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 import React, { useEffect, useState } from 'react'
-
-
 const Highlightsec = styled.div`
 display:flex;
 justify-content:center;
@@ -37,6 +35,7 @@ const Pro1 = styled.div`
     position: relative;
     background-color: #f6f6f6;
     transition: all 0.5s;
+    cursor: pointer;
 &:hover{
   background-color:#dddddd;
 }
@@ -62,6 +61,7 @@ const Pro2 = styled.div`
     position: relative;
     background-color: #f6f6f6;
     transition: all 0.5s;
+    cursor: pointer;
 &:hover{
   background-color:#dddddd;
 }
@@ -88,6 +88,7 @@ const Pro3 = styled.div`
   background-color: #f6f6f6;
   border-radius: 0px 5px 0px 0px;
   transition: all 0.5s;
+  cursor: pointer;
 &:hover{
   background-color:#dddddd;
 }
