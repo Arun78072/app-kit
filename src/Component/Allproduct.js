@@ -7,7 +7,17 @@ import { AiOutlineHeart } from 'react-icons/ai';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { NavLink } from 'react-router-dom';
 
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Products =()=>{
+  useEffect(() => {
+    AOS.init({
+        duration : 2000
+    });
+    AOS.refresh();
+  }, []);
+
+
   const[data, setData] = useState([]);
   const[filter, setFilter] = useState(data);
   const[loading, setLoading]= useState(false);
@@ -57,7 +67,7 @@ const Products =()=>{
        {filter.map((product)=>{
               return(
                   <>
-                  <li>
+                  <li data-aos="zoom-in">
                     <Pro>
                     <Onhover>
                       <img src={product.image}/>
