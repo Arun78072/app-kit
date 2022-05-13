@@ -27,7 +27,19 @@ h1{
     top: 10px;
     left: 26px;
     animation : updown 3s;
+    @media(max-width:768px){
+      font-size: 12px;
+    }
 }
+span{
+  font-weight: 700;
+  font-size: 18px;
+  color: #40BFFF;
+  position:absolute;
+  @media(max-width:768px){
+      font-size: 12px;
+    }
+  }
 `;
 const Pro1 = styled.div`
     padding: 0px 40px;
@@ -36,6 +48,9 @@ const Pro1 = styled.div`
     background-color: #f6f6f6;
     transition: all 0.5s;
     cursor: pointer;
+    @media(max-width:768px){
+      padding: 0px 20px;
+    }
 &:hover{
   background-color:#dddddd;
 }
@@ -43,17 +58,15 @@ const Pro1 = styled.div`
   filter: brightness(0.9);
 }
 span{
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 180%;
-  color: #40BFFF;
   bottom: 20px;
   right: 20px;
-  position:absolute;
   }
 img{
   transition: all 0.5s;
   max-width: 220px;
+  @media(max-width:768px){
+    max-width: 190px;
+  }
 }
 `;
 const Pro2 = styled.div`
@@ -62,6 +75,9 @@ const Pro2 = styled.div`
     background-color: #f6f6f6;
     transition: all 0.5s;
     cursor: pointer;
+    @media(max-width:768px){
+      padding: 0px 20px;
+    }
 &:hover{
   background-color:#dddddd;
 }
@@ -69,17 +85,15 @@ const Pro2 = styled.div`
   filter: brightness(0.9);
 }
 span{
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 180%;
-  color: #40BFFF;
-  position:absolute;
   top: 10px;
   right: 20px;
   }
 img{
   transition: all 0.5s;
   max-width: 220px;
+  @media(max-width:768px){
+    max-width: 190px;
+  }
 }
 `;
 const Pro3 = styled.div`
@@ -89,6 +103,9 @@ const Pro3 = styled.div`
   border-radius: 0px 5px 0px 0px;
   transition: all 0.5s;
   cursor: pointer;
+  @media(max-width:768px){
+      padding: 0px 20px;
+    }
 &:hover{
   background-color:#dddddd;
 }
@@ -96,17 +113,15 @@ const Pro3 = styled.div`
   filter: brightness(0.9);
 }
 span{
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 180%;
-  color: #40BFFF;
-  position:absolute;
   bottom: 20px;
   right: 20px;
   }
 img{
   transition: all 0.5s;
   max-width: 220px;
+  @media(max-width:768px){
+    max-width: 190px;
+  }
 }
 `;
 const List = styled.ul`
@@ -127,15 +142,19 @@ const List = styled.ul`
   li:nth-child(1) {
   font-weight: 400;
   font-size: 14px;
-  line-height: 150%;
   text-decoration-line: line-through;
   color: #9098B1;
-}
-li:nth-child(2) {
+  @media(max-width:768px){
+      font-size: 12px;
+    }
+  }
+  li:nth-child(2) {
   font-weight: 700;
   font-size: 14px;
-  line-height: 150%;
   color: #FB7181;
+  @media(max-width:768px){
+      font-size: 12px;
+    }
   }
 `;
 

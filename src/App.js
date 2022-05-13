@@ -12,6 +12,7 @@ import Payment from './Payment'
 import Payment2 from './Payment2'
 import Payment3 from './Payment3'
 import Cart from "./Component/Cart";
+import Test from './Component/Test';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path='/payment2' element={<Payment2 />}/>
           <Route path='/payment3' element={<Payment3 />}/>
           <Route path='/cart' element={<Cart />} />
+          <Route path='/test' element={<Test/>} />
         </Route>
       </Routes>
       <Footer />

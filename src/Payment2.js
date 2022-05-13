@@ -1,4 +1,4 @@
-import Addtocart from './Addtocart'
+import Cart from './Component/Cart'
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 import { BsArrowLeftShort } from 'react-icons/bs';
@@ -6,7 +6,7 @@ import { MdOutlineCancel } from 'react-icons/md';
 export default function Payment2(){
     return(
         <>
-        <Addtocart />
+        <Cart />
         <Payments>
             <section>
             <Cancelbtn>

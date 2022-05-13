@@ -70,6 +70,9 @@ const Heading = styled.h1`
     font-size: 35px;
     line-height: 52px;
     color: #22262A;
+    @media (max-width:786px){
+        font-size:24px;
+    }
 `;
 
 const Container = styled.div`
@@ -89,21 +92,40 @@ const NewsSlide = styled.div`
     gap:20px;
     font-family: 'Poppins';
     font-style: normal;
+    max-width:300px;
+    @media (max-width:786px){
+        gap:8px;
+        margin: 10px 4px;
+    }
+    div:nth-child(1) img{
+    @media (max-width:786px){
+        width:100px;
+    }
+    }
     h5{
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
     color: #C1C8CE;
+    @media (max-width:786px){
+        font-size:14px;
+    }
     }
     h1{
     font-weight: 600;
     font-size: 22px;
     line-height: 33px;
     color: #22262A;
+    @media (max-width:786px){
+        font-size:18px;
+    }
     }
     p{
     font-weight: 400;
     font-size: 16px;
     color: #22262A;
+    @media (max-width:786px){
+        font-size:14px;
+    }
     }
 `;

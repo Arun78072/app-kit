@@ -44,8 +44,9 @@ display:none;
   padding:30px;
   display: flex;
   background-color:#fff;
-
+  z-index: 9;
 }
+
 .hovermenu ul{
   display:block !important;
   background-color:#fff;
@@ -67,4 +68,20 @@ color: #262626;
   line-height: 33px;
   color: #C1C8CE;
   height:30px;
+}
+
+@media (max-width:786px){
+  .hovermenu{
+    position: relative;
+    top:0px;
+  }
+  .hovermenu ul {
+    height: auto;
+    position: relative;
+  }
+  .hovermenu section {
+    padding: 0px;
+    display: block; 
+    background-color: none;
+  }
 }

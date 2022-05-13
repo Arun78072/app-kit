@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import '../index.css';
-
 import gsap from "gsap";
 
 
-export default function ShoesSection({font}) {
+export default function ShoesSection(props) {
     return (
     <Adidashoes>
       <div>
@@ -27,7 +26,6 @@ const Adidashoes = styled.div`
   align-items: center;
   background: var(--blue);
   padding:20px;
-  
   @media (max-width:600px){
   flex-direction: column-reverse;
   }
@@ -43,12 +41,13 @@ const Adidashoes = styled.div`
   h1 {
   font-weight: 500;
   font-size: 42px;
-  line-height: 62px;
   padding-bottom: 16px;
   color: #FFFFFF;
+  @media (max-width:786px){
+    font-size:28px;
+  }
   @media (max-width:600px){
   font-size: 40px;
-  line-height: 44px;
   }
   }
   @keyframes shoesec {

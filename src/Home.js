@@ -14,7 +14,7 @@ export default function Home(){
         <Banner />
         <Highlights />
         <Products />
-        <ShoesSection />
+        <ShoesSection size={'12px'}/>
         <Shipping />
         <News />
         <Feature />

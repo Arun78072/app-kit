@@ -1,4 +1,4 @@
-import Addtocart from './Addtocart'
+import Cart from './Component/Cart'
 import styled from 'styled-components'
 import { AiOutlineIdcard } from 'react-icons/ai';
 import { GrPaypal } from 'react-icons/gr';
@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom'
 export default function Payment(){
     return(
         <>
-        <Addtocart />
+        <Cart />
         <Payments>
             <section>
             <h1>Make Payment</h1>

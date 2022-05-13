@@ -66,6 +66,9 @@ const ShipSec = styled.div`
     font-size: 28px;
     line-height: 40px;
     color: #22262A;
+    @media (max-width:786px){
+        font-size: 22px;
+    }
     }
     p{
     font-style: normal;
@@ -74,6 +77,9 @@ const ShipSec = styled.div`
     line-height: 22px;
     text-align: center;
     color: #22262A;
+    @media (max-width:786px){
+        font-size: 14px;
+    }
     }
     img{
     margin-bottom:30px;

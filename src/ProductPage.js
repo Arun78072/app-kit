@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import ShoesSection from './Component/ShoesSection';
-// import Product from './Component/Product';
 import Sidebar from './Component/Sidebar';
 import {BsFillGrid3X3GapFill} from 'react-icons/bs';
 import {GiHamburgerMenu} from 'react-icons/gi';

@@ -55,7 +55,6 @@ const Products =()=>{
                 <Bestsellerr>
                     <h1>Best Seller</h1>
                 </Bestsellerr>
-
           <Btns>
             <button onClick={()=>setFilter(data)}> All </button>
             <button onClick={()=>filterProduct("men's clothing")}> Men </button>
@@ -100,7 +99,6 @@ const Products =()=>{
   }
   return(
       <>
-          
           <div>
               {loading ? <Loading/> : <ShowProduct/>}
           </div>
@@ -164,6 +162,10 @@ const Pro = styled.div`
   -webkit-line-clamp: 2; /* number of lines to show */
   -webkit-box-orient: vertical;
   height: 50px;
+  @media (max-width:786px){
+    font-size: 14px;
+    height: 46px;
+  }
   }
 `;
 const Onhover = styled.div `
@@ -191,6 +193,10 @@ const Onhover = styled.div `
   width: 230px;
   height: 230px;
   object-fit: contain;
+  @media (max-width:786px){
+    width: 180px;
+    height: 180px;
+  }
   }
   svg {
   color: #33A0FF;
@@ -225,21 +231,27 @@ const List = styled.ul`
   li:nth-child(1){
   font-weight: 700;
   font-size: 18px;
-  line-height: 180%;
   color: #40BFFF;
+  @media (max-width:786px){
+    font-size: 12px;
+  }
   }
   li:nth-child(2) {
   font-weight: 400;
   font-size: 14px;
-  line-height: 150%;
   text-decoration-line: line-through;
   color: #9098B1;
+  @media (max-width:786px){
+    font-size: 12px;
+  }
   }
   li:nth-child(3) {
   font-weight: 700;
   font-size: 14px;
-  line-height: 150%;
   color: #FB7181;
+  @media (max-width:786px){
+    font-size: 10px;
+  }
   }
 `;
 const Mainsec = styled.ul` 
@@ -253,6 +265,9 @@ const Mainsec = styled.ul`
   li {
     width: 280px;
     transition:all 0.5s;
+    @media (max-width:786px){
+      width: 200px;
+    }
   }
   li:hover{
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
